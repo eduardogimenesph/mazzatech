@@ -1,0 +1,73 @@
+
+    <nav class="navbar navbar-expand-sm navbar-dark bg-danger">
+        <a href="/" class="navbar-brand">Mazzatech Agendamentos</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar2">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="navbar-collapse collapse" id="navbar2">
+            <ul class="navbar-nav">
+                <li class="nav-item" [routerLinkActive]="['link-active']">
+                    <a class="nav-link" [routerLink]="['/agendamentos']">
+                        <i class="fa fa-calendar"></i> Agendamentos
+                    </a>
+                </li>
+                <li class="nav-item" [routerLinkActive]="['link-active']">
+                    <a class="nav-link" [routerLink]="['/usuarios']">
+                        <i class="fa fa-key"></i> Usuarios
+                    </a>
+                </li>
+                <li class="nav-item" [routerLinkActive]="['link-active']">
+                    <a class="nav-link" [routerLink]="['/pacientes']">
+                        <i class="fa fa-child"></i> Pacientes
+                    </a>
+                </li>
+                <li class="nav-item" [routerLinkActive]="['link-active']">
+                    <a class="nav-link" [routerLink]="['/medicos']">
+                        <i class="fa fa-heartbeat"></i> Medicos
+                    </a>
+                </li>
+                <li>
+                    <a class="nav-link" (click)="sair()"><i class="fa fa-times"></i> Sair</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <!--<nav class="navbar navbar-expand-sm navbar-dark bg-dark">
+        <div class='navbar-header'>
+            <button type='button' class='navbar-toggle' data-toggle='collapse' data-target='.navbar-collapse'>
+                <span class='sr-only'>Toggle navigation</span>
+                <span class='icon-bar'></span>
+                <span class='icon-bar'></span>
+                <span class='icon-bar'></span>
+            </button>
+            <a class='navbar-brand' [routerLink]="['/home']">Mazzatech Agendamentos</a>
+        </div>
+        <div class='clearfix'></div>
+        <div class='navbar-collapse collapse'>
+            <ul class='nav navbar-nav'>
+                <li >
+                
+                </li>
+                <li [routerLinkActive]="['link-active']">
+                    <a [routerLink]="['/usuarios']">
+                        <span class='glyphicon glyphicon-user'></span> Usuarios
+                    </a>
+                </li>
+                <li [routerLinkActive]="['link-active']">
+                    <a [routerLink]="['/pacientes']">
+                        <span class='glyphicon glyphicon-list-alt'></span> Pacientes
+                    </a>
+                </li>
+                <li [routerLinkActive]="['link-active']">
+                    <a [routerLink]="['/medicos']">
+                        <span class='glyphicon glyphicon-heart-empty'></span> Medicos
+                    </a>
+                </li>
+                <li>
+                    <button class="sair-btn btn btn-danger" (click)="sair()"><span class='glyphicon glyphicon-remove'></span> Sair</button>
+                </li>
+            </ul>
+
+        </div>
+    </nav>-->

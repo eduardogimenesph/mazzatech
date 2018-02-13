@@ -1,0 +1,44 @@
+﻿
+<p-growl [(value)]="msgs"></p-growl>
+<form class="margin-top-20" (ngSubmit)="salvar()" [formGroup]="addMedico">
+    <div class="row margin-top-20">
+        <div class="col-md-3">
+            <div class="form-group">
+                <label>CRM: (*) </label>
+                <input type="text" class="form-control" [(ngModel)]="modelMedico.CRM" formControlName="crm" placeholder="">
+            </div>
+        </div>
+        <div class="col-md-3">
+            <div class="form-group">
+                <label>Nome: (*) </label>
+                <input type="text" class="form-control" [(ngModel)]="modelMedico.Nome" formControlName="nome" placeholder="">
+            </div>
+        </div>
+        <div class="col-md-3">
+            <div class="form-group">
+                <label class="col-md-12 padding-left-0">Telefone: (*) </label>
+                <p-inputMask mask="(99) 9999-9999" [(ngModel)]="modelMedico.Telefone" formControlName="telefone" placeholder=""></p-inputMask>
+            </div>
+        </div>
+        <div class="col-md-3">
+            <div class="form-group">
+                <label class="col-md-12 padding-left-0">Celular: (*) </label>
+                <p-inputMask  mask="(99) 9999-9999?9" [(ngModel)]="modelMedico.Celular" formControlName="celular" placeholder=""></p-inputMask>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-12">
+            <div class="form-group">
+                <label>Especialidade: (*) </label>
+                <input type="text" class="form-control" [(ngModel)]="modelMedico.Especialidade" formControlName="especialidade" placeholder="">
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-4">
+            <button type="submit" class="btn btn-success" [disabled]="!addMedico.valid">Salvar</button>
+            <button type="button" (click)="cancelar()" class="btn btn-default">Cancelar</button>
+        </div>
+    </div>
+</form>

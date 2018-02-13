@@ -1,0 +1,39 @@
+<!--<p-message severity="info" text="PrimeNG Rocks"></p-message>-->
+<p-growl [(value)]="msgs"></p-growl>
+<div class="row margin-top-20 ">
+    <div class="col-md-4">
+        <button class="btn btn-success" (click)="novoMedico()"><i class="fa fa-plus-circle"></i> Incluir</button>
+    </div>
+</div>
+<div class="row ">
+    <div class="col-md-12 margin-top-20 ">
+        <div class="input-group input-group-lg">
+            <span class="input-group-addon" id="sizing-addon1"><span class='glyphicon glyphicon-search'></span></span>
+            <input #gb type="text" class="form-control" placeholder="Filtrar">
+        </div>
+    </div>
+    <div class="col-md-12 margin-top-20 ">
+        <p-dataTable [value]="medicos" [rows]="10" [paginator]="true" [globalFilter]="gb">
+            <p-column field="crm" header="CRM" sortable="true"></p-column>
+            <p-column field="nome" header="Nome" sortable="true"></p-column>
+            <p-column field="telefone" header="Telefone" sortable="true"></p-column>
+            <p-column field="celular" header="Celular" sortable="true"></p-column>
+            <p-column field="especialidade" header="Especialidade" sortable="true"></p-column>
+            <p-column styleClass="col-button">
+                <ng-template pTemplate="header">
+
+                </ng-template>
+                <ng-template let-medico="rowData" pTemplate="body">
+                    <button class="btn btn-primary" type="button"  (click)="editar(medico)"><i class="fa fa-edit"></i></button>
+                    <button class="btn btn-danger" type="button"  (click)="remover(medico)"><i class="fa fa-minus-circle"></i></button>
+                </ng-template>
+            </p-column>
+            <ng-template pTemplate="emptymessage">
+                Não foi encontrado registros!
+            </ng-template>
+        </p-dataTable>
+
+    </div>
+</div>
+
+

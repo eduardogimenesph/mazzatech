@@ -1,0 +1,12 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.0</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Mazzatech.Agendamento.Repository\Mazzatech.Agendamento.Repository.csproj" />
+    <ProjectReference Include="..\Mazztech.Agendamento.Domain\Mazzatech.Agendamento.Domain.csproj" />
+  </ItemGroup>
+
+</Project>

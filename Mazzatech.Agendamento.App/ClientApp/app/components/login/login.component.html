@@ -1,0 +1,99 @@
+﻿
+<p-growl [(value)]="msgs"></p-growl>
+<div class="" id="fixo">
+    <div class="centralizar">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="col-md-10 centralizar-login">
+                    <form class="form-horizontal" role="form" (ngSubmit)="onSubmit()" [formGroup]="addLogin">
+                        <div class="row">
+                            <div class="col-md-3"></div>
+                            <div class="col-md-12">
+                                <h2 style="font-weight:300;font-size:14px">Mazzatech Agendamentos Login</h2>
+                                <hr>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-3"></div>
+                            <div class="col-md-12">
+                                <div class="form-group has-danger">
+                                    <label class="sr-only" for="usuario">Usuário</label>
+                                    <div class="input-group mb-2 mr-sm-2 mb-sm-0">
+                                        <div class="input-group-addon" style="width: 2.6rem"><i class="fa fa-at"></i></div>
+                                        <input type="text" name="usuario" placeholder="Usuário" class="form-control" id="usuario" [(ngModel)]="modelLogin.Usuario" formControlName="usuario" required autofocus>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-3"></div>
+                            <div class="col-md-12">
+                                <div class="form-group">
+                                    <label class="sr-only" for="password">Senha</label>
+                                    <div class="input-group mb-2 mr-sm-2 mb-sm-0">
+                                        <div class="input-group-addon" style="width: 2.6rem"><i class="fa fa-key"></i></div>
+                                        <input type="password" name="password" placeholder="Senha" class="form-control" id="password"
+                                               [(ngModel)]="modelLogin.Senha" formControlName="senha" required>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-xs-12 col-sm-12 col-md-12">
+                                <button type="submit" class="btn btn-success btn-block btn-lg" [disabled]="!addLogin.valid"> Entrar </button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+                <!--<div class="panel with-nav-tabs panel-info">
+        <div class="panel-body">
+            <div class="tab-content">
+                <div id="login" class="tab-pane fade in active register">
+                    <div class="">
+                        <div class="row">
+                            <h2 class="text-center" style="color: #5cb85c;"> <strong> Mazzatech Agendamentos  </strong></h2><hr />
+                            <form (ngSubmit)="onSubmit()" [formGroup]="addLogin">
+                                <div class="row">
+                                    <div class="col-xs-12 col-sm-12 col-md-12">
+                                        <div class="form-group">
+                                            <div class="input-group">
+                                                <div class="input-group-addon">
+                                                    <span class="glyphicon glyphicon-user"></span>
+                                                </div>
+                                                <input type="text" required [(ngModel)]="modelLogin.Usuario" formControlName="usuario" placeholder="Usuario" class="form-control">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-xs-12 col-sm-12 col-md-12">
+                                        <div class="form-group">
+                                            <div class="input-group">
+                                                <div class="input-group-addon">
+                                                    <span class="glyphicon glyphicon-lock"></span>
+                                                </div>
+                                                <input type="password" [(ngModel)]="modelLogin.Senha" formControlName="senha" required placeholder="Senha" class="form-control">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <hr />
+                                <div class="row">
+                                    <div class="col-xs-12 col-sm-12 col-md-12">
+                                        <button type="submit" class="btn btn-success btn-block btn-lg" [disabled]="!addLogin.valid"> Entrar </button>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>-->
+            </div>
+        </div>
+    </div>
+
+</div>

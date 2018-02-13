@@ -1,0 +1,33 @@
+﻿<p-growl [(value)]="msgs"></p-growl>
+<form class="margin-top-20" (ngSubmit)="salvar()" [formGroup]="add">
+    <div class="row margin-top-20">
+        <div class="col-md-3">
+            <div class="form-group">
+                <label class="col-md-12 padding-left-0">Médicos: (*) </label>
+                <select class="form-control" [(ngModel)]="model.MedicoId" formControlName="medicoId">
+                    <option *ngFor="let c of medicos" [ngValue]="c.id">{{c.nome}}</option>
+                </select>
+            </div>
+        </div>
+        <div class="col-md-3">
+            <div class="form-group">
+                <label class="col-md-12 padding-left-0">Pacientes: (*) </label>
+                <select class="form-control" [(ngModel)]="model.PacienteId" formControlName="pacienteId">
+                    <option *ngFor="let c of pacientes" [ngValue]="c.id">{{c.nome}}</option>
+                </select>
+            </div>
+        </div>
+        <div class="col-md-3">
+            <div class="form-group">
+                <label >Data Consulta: (*) </label>
+                <p-calendar [(ngModel)]="model.DataConsulta" [required]="true" readonlyInput="true" [locale]="pt" dateFormat="dd/mm/yy" showTime="true" hourFormat="24" [monthNavigator]="true" [yearNavigator]="false" [disabledDays]="[0,6]"  formControlName="dataConsulta"></p-calendar>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-4">
+            <button type="submit" class="btn btn-success" [disabled]="!add.valid" >Salvar</button>
+            <button type="button" (click)="cancelar()" class="btn btn-default">Cancelar</button>
+        </div>
+    </div>
+</form>

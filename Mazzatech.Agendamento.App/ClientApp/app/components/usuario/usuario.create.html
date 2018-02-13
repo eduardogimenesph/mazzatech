@@ -1,0 +1,29 @@
+﻿<p-growl [(value)]="msgs"></p-growl>
+<form class="margin-top-20" (ngSubmit)="salvar()" [formGroup]="add">
+    <div class="row margin-top-20">
+        <div class="col-md-3">
+            <div class="form-group">
+                <label>Usuário: (*) </label>
+                <input type="text" class="form-control" [(ngModel)]="model.Login" formControlName="login" placeholder="">
+            </div>
+        </div>
+        <div class="col-md-3">
+            <div class="form-group">
+                <label>Senha: </label>
+                <input type="password" class="form-control" [(ngModel)]="model.Senha" formControlName="senha" placeholder="">
+            </div>
+        </div>
+        <div class="col-md-3">
+            <div class="form-group">
+                <label>Nome: (*) </label>
+                <input type="text" class="form-control" [(ngModel)]="model.Nome" formControlName="nome" placeholder="">
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-4">
+            <button type="submit" class="btn btn-success" [disabled]="!add.valid">Salvar</button>
+            <button type="button" (click)="cancelar()" class="btn btn-default">Cancelar</button>
+        </div>
+    </div>
+</form>

@@ -1,0 +1,56 @@
+﻿<p-growl [(value)]="msgs"></p-growl>
+<form class="margin-top-20" (ngSubmit)="salvar()" [formGroup]="add">
+    <div class="row margin-top-20">
+        <div class="col-md-3">
+            <div class="form-group">
+                <label>Nome: (*) </label>
+                <input type="text" class="form-control" [(ngModel)]="model.Nome" formControlName="nome" placeholder="">
+            </div>
+        </div>
+        <div class="col-md-3">
+            <div class="form-group">
+                <label class="col-md-12 padding-left-0">CPF: (*) </label>
+                <p-inputMask mask="999.999.999-99" [(ngModel)]="model.Cpf" formControlName="cpf" placeholder=""></p-inputMask>
+            </div>
+        </div>
+        <div class="col-md-3">
+            <div class="form-group">
+                <label class="col-md-12 padding-left-0">Telefone: (*) </label>
+                <p-inputMask mask="(99) 9999-9999" [(ngModel)]="model.Telefone" formControlName="telefone" placeholder=""></p-inputMask>
+            </div>
+        </div>
+        <div class="col-md-3">
+            <div class="form-group">
+                <label class="col-md-12 padding-left-0">Celular: (*) </label>
+                <p-inputMask mask="(99) 9999-9999?9" [(ngModel)]="model.Celular" formControlName="celular" placeholder=""></p-inputMask>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+
+        <div class="col-md-3">
+            <div class="form-group">
+                <label>E-mail: (*) </label>
+                <input type="text" class="form-control" [(ngModel)]="model.Email" formControlName="email" placeholder="">
+            </div>
+        </div>
+        <div class="col-md-6">
+            <div class="form-group">
+                <label>Endereço Completo: (*) </label>
+                <input type="text" class="form-control" [(ngModel)]="model.EnderecoCompleto" formControlName="enderecoCompleto" placeholder="">
+            </div>
+        </div>
+        <div class="col-md-3">
+            <div class="form-group">
+            <label>Data Nascimento: (*) </label>
+            <p-calendar [(ngModel)]="model.DataNascimento" [required]="true" readonlyInput="true" [locale]="pt" dateFormat="dd/mm/yy" [monthNavigator]="true" [yearNavigator]="true" yearRange="1960:2030" formControlName="dataNascimento"></p-calendar>
+        </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-4">
+            <button type="submit"  class="btn btn-success" [disabled]="!add.valid">Salvar</button>
+            <button type="button" (click)="cancelar()" class="btn btn-default">Cancelar</button>
+        </div>
+    </div>
+</form>

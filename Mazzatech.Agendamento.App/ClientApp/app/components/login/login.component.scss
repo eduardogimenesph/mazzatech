@@ -1,0 +1,29 @@
+﻿$background-login: #c2c2c2;
+
+#fixo {
+    position: fixed;
+    left: 0;
+    top: 0;
+    right:0;
+    background: $background-login;
+    width: 100%;
+    height: 100%;
+    z-index: 999999999;
+}
+.centralizar {
+    width: 400px;
+    height: 300px;
+    display: block;
+    margin: auto;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    background:#ffffff;
+    right: 0;
+}
+.centralizar-login{
+    display:block;
+    margin:auto;
+    margin-top:30px;
+}
